@@ -2,7 +2,8 @@
   "name": "@littlethings/test",
   "version": "1.1.0",
   "description": "A little testing library.",
-  "main": "src/index.js",
+  "main": "./src/index.js",
+  "bin": "./src/bin.js",
   "repository": "git@github.com:jakehamilton/littletest.git",
   "author": "Jake Hamilton <jake@intergalactic.email>",
   "license": "GPL-3.0-only",
@@ -11,11 +12,12 @@
     "access": "public"
   },
   "scripts": {
-    "test": "node ./test/index.js"
+    "test": "node ./src/bin.js \"./**/*.test.js\""
   },
   "dependencies": {
+    "@littlethings/log": "^1.1.0",
     "chalk": "^4.0.0",
-    "@littlethings/log": "^1.1.0"
+    "glob": "^7.1.6"
   },
   "devDependencies": {
     "prettier": "^2.0.5"
