@@ -1,6 +1,6 @@
 {
   "name": "@littlethings/test",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A little testing library.",
   "main": "./src/index.js",
   "bin": "./src/bin.js",
