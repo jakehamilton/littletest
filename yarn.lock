@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@littlethings/log@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@littlethings/log/-/log-1.1.0.tgz#98994ab6d337c9d42b3708000ca77ec0338a2153"
+  integrity sha512-VReA7dR0Av8316QT0aU/WjZrStqkEJwX+2lln1gM0H4kgxLJ/U6UafSxLKnClh2PKHEA5B+qINHS0Z+9nqVZ2g==
+  dependencies:
+    chalk "^4.0.0"
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -39,13 +46,6 @@ has-flag@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
   integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
-
-littlelog@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/littlelog/-/littlelog-1.1.0.tgz#9b0d12087bbd00a95beb3ea6be70fe870754a79d"
-  integrity sha512-WFga4c/s9xAQadVRb05OWlHXr98A8ej1mKC6RXruqYQaLYEMR2YFkdgnmDb4DwNXxoZT5l+u2BFNd6v749YV5Q==
-  dependencies:
-    chalk "^4.0.0"
 
 prettier@^2.0.5:
   version "2.0.5"

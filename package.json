@@ -1,5 +1,5 @@
 {
-  "name": "littletest",
+  "name": "@littlethings/test",
   "version": "1.0.0",
   "description": "A little testing library.",
   "main": "src/index.js",
@@ -7,12 +7,15 @@
   "author": "Jake Hamilton <jake@intergalactic.email>",
   "license": "GPL-3.0-only",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "node ./test/index.js"
   },
   "dependencies": {
     "chalk": "^4.0.0",
-    "littlelog": "^1.1.0"
+    "@littlethings/log": "^1.1.0"
   },
   "devDependencies": {
     "prettier": "^2.0.5"
