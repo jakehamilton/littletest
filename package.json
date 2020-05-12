@@ -1,0 +1,19 @@
+{
+  "name": "littletest",
+  "version": "1.0.0",
+  "description": "A little testing library.",
+  "main": "src/index.js",
+  "repository": "git@github.com:jakehamilton/littletest.git",
+  "author": "Jake Hamilton <jake@intergalactic.email>",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "test": "node ./test/index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "littlelog": "^1.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
+}
