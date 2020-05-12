@@ -26,3 +26,8 @@ describe('My Test Suite', it => {
     });
 });
 ```
+
+```shell
+# Glob your test files to run.
+npx @littlethings/test ./src/**/*.test.js
+```
