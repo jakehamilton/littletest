@@ -67,7 +67,7 @@ const report = async (name, tests) => {
                     }
 
                 } catch (error) {
-
+                    // Couldn't read the file, what a shame :(
                 }
 
                 console.log(chalk`     Received {red ${util.pretty(result.received)}}, but expected {green ${util.pretty(result.expected)}}.`)
