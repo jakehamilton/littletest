@@ -6,6 +6,7 @@
   "repository": "git@github.com:jakehamilton/littletest.git",
   "author": "Jake Hamilton <jake@intergalactic.email>",
   "license": "GPL-3.0-only",
+  "private": false,
   "scripts": {
     "test": "node ./test/index.js"
   },

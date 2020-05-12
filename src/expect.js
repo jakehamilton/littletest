@@ -5,6 +5,7 @@ class Expect {
     constructor({ received, submit }) {
         this.received = received;
         this.submit = submit;
+        this.location = null;
 
         this.flags = {
             not: false,

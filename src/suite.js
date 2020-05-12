@@ -30,10 +30,18 @@ class Suite {
             const results = [];
 
             await callback(received => {
+                const { stack } = new Error();
+                const [, location] = /\s+at \(?(.+)\)?/.exec(
+                    stack.split('\n')[2],
+                );
+
                 return new Expect({
                     received,
                     submit: result => {
-                        results.push(result)
+                        results.push({
+                            ...result,
+                            location
+                        });
                     },
                 });
             });

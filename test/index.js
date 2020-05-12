@@ -39,6 +39,10 @@ try {
         it('Should support negation.', expect => {
             expect(true).to.not.equal(false);
         });
+
+        it('Should fail tests.', expect => {
+            expect(true).to.equal(false);
+        });
     });
 } catch (error) {
     console.log(`An unexpected error occurred.`);

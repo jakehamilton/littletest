@@ -17,7 +17,7 @@ const describe = async (name, run) => {
     KNOWN_SUITES.set(name, suite);
 
     const tests = await suite.test();
-    report(name, tests);
+    await report(name, tests);
 };
 
 module.exports = {
