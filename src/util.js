@@ -1,18 +1,20 @@
-const prettyArray = array => {
+const prettyArray = (array) => {
     const items = array.map(pretty);
 
     return `[${items.join(', ')}]`;
-}
-
-const prettyObject = object => {
-    const entries = Object.entries(object);
-
-    return `{ ${entries.map(([key, value]) => {
-        return `${key}: ${pretty(value)}`;
-    }).join(', ')} }`;
 };
 
-const pretty = value => {
+const prettyObject = (object) => {
+    const entries = Object.entries(object);
+
+    return `{ ${entries
+        .map(([key, value]) => {
+            return `${key}: ${pretty(value)}`;
+        })
+        .join(', ')} }`;
+};
+
+const pretty = (value) => {
     if (Array.isArray(value)) {
         return prettyArray(value);
     } else if (typeof value === 'object') {
@@ -33,7 +35,7 @@ const deepEqual = (x, y) => {
         }
 
         for (let i = 0; i < x.length; i++) {
-            const isEqual = deepEqual(x[i], y[i])
+            const isEqual = deepEqual(x[i], y[i]);
 
             if (!isEqual) {
                 return false;
@@ -51,7 +53,7 @@ const deepEqual = (x, y) => {
         }
 
         for (const key of keys) {
-            const isEqual = deepEqual(x[key], y[key])
+            const isEqual = deepEqual(x[key], y[key]);
 
             if (!isEqual) {
                 return false;
@@ -62,7 +64,7 @@ const deepEqual = (x, y) => {
     }
 
     return x === y;
-}
+};
 
 module.exports = {
     pretty,

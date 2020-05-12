@@ -9,7 +9,9 @@ const KNOWN_SUITES = new Map();
 
 const describe = async (name, run) => {
     if (KNOWN_SUITES.has(name)) {
-        console.log(chalk`{red A test suite already exists with the name "${name}".}`)
+        console.log(
+            chalk`{red A test suite already exists with the name "${name}".}`,
+        );
         return;
     }
 
@@ -23,4 +25,4 @@ const describe = async (name, run) => {
 module.exports = {
     describe,
     KNOWN_SUITES,
-}
+};

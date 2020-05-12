@@ -3,7 +3,7 @@ const chalk = require('chalk');
 const { Expect } = require('./expect');
 
 class Suite {
-    constructor ({ name, run }) {
+    constructor({ name, run }) {
         this.name = name;
         this.run = run;
 
@@ -14,7 +14,9 @@ class Suite {
     async test() {
         this.run((name, callback) => {
             if (this.tests.has(name)) {
-                console.log(chalk`{red A test already exists with the name "${name}".}`)
+                console.log(
+                    chalk`{red A test already exists with the name "${name}".}`,
+                );
                 return;
             }
 
@@ -29,7 +31,7 @@ class Suite {
 
             const results = [];
 
-            await callback(received => {
+            await callback((received) => {
                 const { stack } = new Error();
                 const [, location] = /\s+at \(?(.+)\)?/.exec(
                     stack.split('\n')[2],
@@ -37,10 +39,10 @@ class Suite {
 
                 return new Expect({
                     received,
-                    submit: result => {
+                    submit: (result) => {
                         results.push({
                             ...result,
-                            location
+                            location,
                         });
                     },
                 });

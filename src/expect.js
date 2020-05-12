@@ -11,7 +11,7 @@ class Expect {
             not: false,
             deep: false,
             weak: false,
-        }
+        };
     }
 
     get to() {
@@ -36,7 +36,7 @@ class Expect {
         if (this.flags.deep) {
             success = util.deepEqual(expected, received);
         } else if (this.flags.weak) {
-            success = received == expected
+            success = received == expected;
         } else {
             success = received === expected;
         }
@@ -54,5 +54,5 @@ class Expect {
 }
 
 module.exports = {
-    Expect
+    Expect,
 };
